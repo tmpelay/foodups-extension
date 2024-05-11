@@ -57,7 +57,7 @@ function App() {
     <div className='app-wrapper'>
       <WelcomeCard></WelcomeCard>
       <OrderCard userInfo={userInfo} orders={orders} />
-      <CheckoutCard />
+      <CheckoutCard price={7.99}/>
       <SuccessOrderCard></SuccessOrderCard>
     </div>
   )

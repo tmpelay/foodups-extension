@@ -3,11 +3,11 @@ import "./WelcomeCard.component.css"
 const WelcomeCard: React.FC = () => {
     return(
         <div className="welcome-card__container">
-            <h1>FoodUPS</h1>
+            <img src="images/foodups-logo.png" alt="FoodUPS" />
             <div className="welcome-card__content">
                 <h2>Welcome to FoodUPS</h2>
                 <p>To start ordering trought our platform. go to the checkout section of a Manhattan based restaurant on Uber Eats</p>
-                <p className="bold-text">Here's what we need from your order:</p>
+                <p className="welcome-card__bold-text">Here's what we need from your order:</p>
                 <ul className="welcome-card__list">
                     <li className="list__element">
                         <img src="images/check.png" alt="" />
