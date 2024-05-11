@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Uber Addon",
+    "name": "FoodUPS",
     "version": "1.0",
-    "description": "addon en react",
+    "description": "FoodUPS Extension",
     "action": {
         "default_popup": "dist/index.html"
     }
