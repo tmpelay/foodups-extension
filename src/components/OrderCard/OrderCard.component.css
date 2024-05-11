@@ -1,7 +1,7 @@
 .order-card__container {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  min-width: 540px;
   width: 540px;
   background-color: var(--bg-color);
   color: var(--fg-color);
@@ -166,10 +166,11 @@
   align-items: center;
 }
 
-.price__pay p {
+.price__pay a {
   font-size: 12px;
   color: var(--bg-color2);
   font-weight: 300;
+  text-decoration: none;
 }
 
 .price__pay span {

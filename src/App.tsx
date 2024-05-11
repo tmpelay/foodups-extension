@@ -1,5 +1,9 @@
-import './App.css'
+//import { Route, Routes } from 'react-router-dom';
+
 import OrderCard from './components/OrderCard/OrderCard.component'
+
+import './App.css'
+import CheckoutCard from './components/CheckoutCard/CheckoutCard.component';
 
 function App() {
 
@@ -48,9 +52,10 @@ function App() {
   ]
 
   return (
-    <>
-      <OrderCard userInfo={userInfo} orders={orders}></OrderCard>
-    </>
+    <div className='app-wrapper'>
+      <OrderCard userInfo={userInfo} orders={orders} />
+      <CheckoutCard />
+    </div>
   )
 }
 

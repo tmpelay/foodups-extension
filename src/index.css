@@ -4,3 +4,7 @@
   --fg-color: #050505;
   --fg-color2: #585858;
 }
+
+html {
+  scroll-behavior: smooth;
+}

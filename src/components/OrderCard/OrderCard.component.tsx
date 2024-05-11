@@ -92,12 +92,13 @@ const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
                     </div>
                 </div>
                 <div className="price__pay">
-                    <p>Checkout and shipment with <span>FoodUPS</span></p>
+                    <a href='#checkout'>Checkout and shipment with <span>FoodUPS</span></a>
                 </div>
             </div>
             <div className="order-card__working-with">
                 <p>Working with <span>stripe</span></p>
             </div>
+            
         </div>
     )
 }

@@ -9,3 +9,11 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 }
+
+.app-wrapper {
+  width: 540px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+  overflow-x: hidden;
+}
