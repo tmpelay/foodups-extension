@@ -5,6 +5,7 @@ import OrderCard from './components/OrderCard/OrderCard.component'
 import './App.css'
 import CheckoutCard from './components/CheckoutCard/CheckoutCard.component';
 import SuccessOrderCard from './components/SuccessOrderCard/SuccessOrderCard';
+import WelcomeCard from './components/WelcomeCard/WelcomeCard.component';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
 
   return (
     <div className='app-wrapper'>
+      <WelcomeCard></WelcomeCard>
       <OrderCard userInfo={userInfo} orders={orders} />
       <CheckoutCard />
       <SuccessOrderCard></SuccessOrderCard>

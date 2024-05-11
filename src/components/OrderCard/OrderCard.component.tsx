@@ -39,7 +39,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
     }
 
     return(
-        <div className="order-card__container">
+        <div className="order-card__container" id="order">
             <ShipTo isOpen={shipToShow} setShipToShow={setShipToShow}></ShipTo>
             <Contact isOpen={contactShow} setContactShow={setContactShow}></Contact>
             <h1>FoodUPS</h1>
