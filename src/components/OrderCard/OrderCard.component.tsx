@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import Order from '../Order/Order.component'
+import ShipTo from '../ShipTo/ShipTo.component';
+import Contact from '../Contact/Contact.component';
 
 import './OrderCard.component.css'
 
@@ -24,12 +27,25 @@ interface OrderCardProps {
 }
 
 const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
+    const [shipToShow, setShipToShow] = useState(false)
+    const [contactShow, setContactShow] = useState(false)
+
+    const openShipTo = () => {
+        setShipToShow(true)
+    }
+
+    const openContact = () => {
+        setContactShow(true)
+    }
+
     return(
         <div className="order-card__container">
+            <ShipTo isOpen={shipToShow} setShipToShow={setShipToShow}></ShipTo>
+            <Contact isOpen={contactShow} setContactShow={setContactShow}></Contact>
             <h1>FoodUPS</h1>
             <div className="order-card__registered-info">
                 <p className='registered-info__title'>Your registered information</p>
-                <div className="registered-info__profile">
+                <div className="registered-info__profile" onClick={openContact}>
                     <img className='profile__img' src={"images/" + userInfo.profileIcon}/>
                     <div className="profile__info">
                         <h3>{userInfo.userName}</h3>
@@ -54,10 +70,10 @@ const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
                 <p className='sent-to__title'>will be sent to</p>
                 <div className="sent-to__card">
                     <div className="sent-to__wrapper">
-                        <a className='sent-to__expand' href="#"><img src="images/expand.png" alt="" /></a>
+                        <img className='sent-to__expand' src="images/expand.png"/>
                         <p>504 Killigly St, Johnson, RI 02919, United States</p>
                     </div>
-                    <img className='sent-to__search' src="images/search.jpg" alt="" />
+                    <img className='sent-to__search' onClick={openShipTo} src="images/search.jpg"/>
                 </div>
             </div>
             <div className="order-card__price">

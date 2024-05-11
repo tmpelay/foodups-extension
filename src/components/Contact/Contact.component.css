@@ -1,0 +1,63 @@
+.modal-window {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  background-color: #05050599;
+  width: 540px;
+  height: 100%;
+  transform: translate(-20px, -18px);
+  z-index: 10;
+  padding-bottom: 10%;
+}
+
+.contact__modal {
+  border-radius: 15px;
+  background-color: var(--bg-color);
+  z-index: 10;
+  padding: 36px;
+  padding-bottom: 40px;
+  width: 420px;
+}
+
+.contact__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contact__form label {
+  font-size: 12px;
+}
+
+.contact__form input {
+  margin: 8px 0;
+  border: none;
+  background-color: var(--bg-color2);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  width: 100%;
+  color: var(--fg-color);
+}
+
+.form__fullname {
+  display: flex;
+  gap: 14px;
+  margin: 4px 0;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
+  padding-right: 16px;
+}
+
+.contact__close {
+  cursor: pointer;
+  margin-top: 16px;
+  font-size: 12px;
+  color: green;
+  font-weight: 600;
+  background: none;
+  border: none;
+}

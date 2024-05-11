@@ -44,22 +44,6 @@ function App() {
       image: "bagel.jpeg",
       description: "Desc",
       quantity: 2
-    },
-    {
-      id: 0,
-      price: "5,99",
-      name: "Bagel w/ Chesse",
-      image: "bagel.jpeg",
-      description: "Plain Bagel Chesse",
-      quantity: 1
-    },
-    {
-      id: 1,
-      price: "3,99",
-      name: "Other Order",
-      image: "bagel.jpeg",
-      description: "Desc",
-      quantity: 2
     }
   ]
 
