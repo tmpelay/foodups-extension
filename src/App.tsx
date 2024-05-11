@@ -4,6 +4,7 @@ import OrderCard from './components/OrderCard/OrderCard.component'
 
 import './App.css'
 import CheckoutCard from './components/CheckoutCard/CheckoutCard.component';
+import SuccessOrderCard from './components/SuccessOrderCard/SuccessOrderCard';
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
     <div className='app-wrapper'>
       <OrderCard userInfo={userInfo} orders={orders} />
       <CheckoutCard />
+      <SuccessOrderCard></SuccessOrderCard>
     </div>
   )
 }
