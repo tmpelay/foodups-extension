@@ -3,7 +3,24 @@ import OrderCard from './components/OrderCard/OrderCard.component'
 
 function App() {
 
-  const userInfo = {
+  type user = {
+    id: number;
+    userName: string;
+    address: string;
+    number: string,
+    profileIcon: string
+  }
+
+  type order = {
+    id: number;
+    price: string;
+    name: string;
+    image: string,
+    description: string
+    quantity: number
+  }
+
+  const userInfo: user = {
     id: 0,
     userName: "Hubert Leo",
     address: "20 W 34th.St, New York, NY 10001, United States",
@@ -11,7 +28,7 @@ function App() {
     profileIcon: "profile.png"
   }
 
-  const orders = [
+  const orders: order[] = [
     {
       id: 0,
       price: "5,99",

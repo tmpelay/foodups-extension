@@ -1,8 +1,21 @@
 import "./Order.component.css"
 
-function Order({ orderInfo }) {
+type order = {
+    id: number;
+    price: string;
+    name: string;
+    image: string,
+    description: string
+    quantity: number
+  }
 
-    const pad = (d) => {
+  interface OrderProps {
+    orderInfo: order
+  }
+
+  const Order: React.FC<OrderProps> = ({ orderInfo }) => {
+
+    const pad = (d: number) => {
         return (d < 10) ? '0' + d.toString() : d.toString();
     }
 

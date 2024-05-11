@@ -2,7 +2,28 @@ import Order from '../Order/Order.component'
 
 import './OrderCard.component.css'
 
-function OrderCard({ userInfo, orders }) {
+type user = {
+    id: number;
+    userName: string;
+    address: string;
+    number: string,
+    profileIcon: string
+  }
+
+  type order = {
+    id: number;
+    price: string;
+    name: string;
+    image: string,
+    description: string
+    quantity: number
+  }
+interface OrderCardProps {
+    userInfo: user;
+    orders: order[];
+}
+
+const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
     return(
         <div className="order-card__container">
             <h1>FoodUPS</h1>
