@@ -3,8 +3,7 @@
   display: grid;
   place-content: center;
   background-color: #05050599;
-  width: 420px;
-  min-width: 420px;
+  width: 480px;
   height: 100%;
   transform: translate(-20px, -18px);
   z-index: 10;

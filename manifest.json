@@ -3,6 +3,9 @@
     "name": "FoodUPS",
     "version": "1.0",
     "description": "FoodUPS Extension",
+    "icons": {
+        "48": "dist/images/UPS-icon.png"
+    },
     "action": {
         "default_popup": "dist/index.html"
     }

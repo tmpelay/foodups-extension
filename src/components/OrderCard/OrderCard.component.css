@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 420px;
-  width: 420px;
+  min-width: 480px;
+  width: 480px;
   background-color: var(--bg-color);
   color: var(--fg-color);
   border-radius: 15px;
