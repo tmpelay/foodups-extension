@@ -11,8 +11,8 @@
   padding: 18px 20px;
 }
 
-.order-card__container h1 {
-  font-size: 22px;
+.order-card__image {
+  width: 110px;
   margin-bottom: 10px;
 }
 
@@ -123,12 +123,15 @@
   width: 22px;
   height: 22px;
   margin-right: 18px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--bg-color);
+  border-radius: 4px;
 }
 
 .sent-to__search {
   cursor: pointer;
-  width: 28px;
-  height: 28px;
+  width: 14px;
+  height: 14px;
 }
 
 /* --- PRICE --- */
@@ -182,18 +185,21 @@
 /* --- WORKING WITH --- */
 
 .order-card__working-with {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 10px;
   width: 96%;
+  margin-top: 16px;
+  gap: 6px;
 }
 
 .order-card__working-with p {
   font-size: 10px;
   text-align: center;
   color: var(--fg-color2);
-  margin: 16px 18px 0;
 }
 
-.order-card__working-with span {
-  font-size: 12px;
-  font-weight: 700;
+.order-card__working-with img {
+  width: 32px;
 }

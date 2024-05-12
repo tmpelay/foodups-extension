@@ -19,25 +19,26 @@ const Contact: React.FC<ContactProps> = ({ isOpen, setContactShow }) => {
         <div className="modal-window">
         <div className="contact__modal">
             <h2 className="contact__title">Contact</h2>
-            <form className="contact__form" action="">
+            <form className="contact__form" action="javascript:;" onSubmit={close}>
                 <div className="form__fullname">
                     <div className="form__input-container">
                         <label htmlFor="name">First Name</label>
-                        <input type="text" id="name" placeholder="First Name" />
+                        <input type="text" id="name" required/>
                     </div>
                     <div className="form__input-container">
                     <label htmlFor="lastname">Last Name</label>
-                    <input type="text" id="lastname" placeholder="Last Name" />
+                    <input type="text" id="lastname" required/>
                     </div>
                 </div>
                 <label htmlFor="address">Phone Number</label>
-                <input className="input--large" type="text" id="address" placeholder="Phone Number"/>
+                <input className="input--large" type="text" id="address" required />
                 <label htmlFor="address">Email</label>
-                <input className="input--large" type="email" id="address" placeholder="Email"/>
+                <input className="input--large" type="email" id="address" required />
+                <div className="btn-container">
+                    <button type="submit" className="contact__close">Save info</button>
+                </div>
             </form>
-            <div className="btn-container">
-            <button className="contact__close" onClick={close}>Save info</button>
-            </div>
+            
             
         </div>
         </div>

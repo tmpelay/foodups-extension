@@ -8,6 +8,7 @@
   transform: translate(-20px, -18px);
   z-index: 10;
   padding-bottom: 10%;
+  animation: appear 0.4s;
 }
 
 .ship-to__modal {
@@ -38,6 +39,12 @@
   font-size: 12px;
   width: 100%;
   color: var(--fg-color);
+  outline: none;
+  font-weight: 600;
+}
+
+.ship-to__form input:user-invalid {
+  outline: 2px solid red;
 }
 
 .form__fullname,

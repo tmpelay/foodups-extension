@@ -42,7 +42,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
         <div className="order-card__container" id="order">
             <ShipTo isOpen={shipToShow} setShipToShow={setShipToShow}></ShipTo>
             <Contact isOpen={contactShow} setContactShow={setContactShow}></Contact>
-            <h1>FoodUPS</h1>
+            <img className='order-card__image' src="images/foodups-logo.png" alt="FoodUPS" />
             <div className="order-card__registered-info">
                 <p className='registered-info__title'>Your registered information</p>
                 <div className="registered-info__profile" onClick={openContact}>
@@ -70,25 +70,25 @@ const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
                 <p className='sent-to__title'>will be sent to</p>
                 <div className="sent-to__card">
                     <div className="sent-to__wrapper">
-                        <img className='sent-to__expand' src="images/expand.png"/>
+                        <img className='sent-to__expand' src="images/expand-icon.png"/>
                         <p>504 Killigly St, Johnson, RI 02919, United States</p>
                     </div>
-                    <img className='sent-to__search' onClick={openShipTo} src="images/search.jpg"/>
+                    <img className='sent-to__search' onClick={openShipTo} src="images/search-icon.png"/>
                 </div>
             </div>
             <div className="order-card__price">
                 <div className="price__table">
                     <div className="table__row">
                         <p>Sub Order Total</p>
-                        <p className='price'> 5,99</p>
+                        <p className='price'>$5,99</p>
                     </div>
                     <div className="table__row">
                         <p className='price'>FoodUPS</p>
-                        <p className='price'> 1,99</p>
+                        <p className='price'>$1,99</p>
                     </div>
                     <div className="table__row">
                         <p>Total</p>
-                        <p className='price'> 7,99</p>
+                        <p className='price'>$7,99</p>
                     </div>
                 </div>
                 <div className="price__pay">
@@ -96,7 +96,8 @@ const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
                 </div>
             </div>
             <div className="order-card__working-with">
-                <p>Working with <span>stripe</span></p>
+                <p>Working with</p>
+                <img src="images/stripe-logo-grey.png" alt="Stirpe" />
             </div>
             
         </div>
