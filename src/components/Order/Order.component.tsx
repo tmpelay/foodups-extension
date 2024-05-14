@@ -1,35 +1,42 @@
-import "./Order.component.css"
+import React from 'react';
+import "./Order.component.css";
 
-type order = {
+type Product = {
     id: number;
     price: string;
     name: string;
     image: string,
     description: string
     quantity: number
-  }
+}
 
-  interface OrderProps {
-    orderInfo: order
-  }
+interface OrderProps {
+    products?: Product[];  // Ahora acepta una lista de productos
+}
 
-  const Order: React.FC<OrderProps> = ({ orderInfo }) => {
-
+const Order: React.FC<OrderProps> = ({ products }) => {
     const pad = (d: number) => {
         return (d < 10) ? '0' + d.toString() : d.toString();
     }
+    if (!products){
+        return <div>No products available.</div>
+    }
 
     return(
-        <div className="your-order__order">
-            <p className='order__price'>{"$" + orderInfo.price}</p>
-            <img className='order__img' src={"images/" + orderInfo.image} alt="" />
-            <div className="order__info">
-                <h3>{orderInfo.name}</h3>
-                <p>{orderInfo.description}</p>
-            </div>
-            <p className='order__quantity'>{pad(orderInfo.quantity)}</p>
+        <div>
+            {products.map(product => (
+                <div key={product.id} className="your-order__order">
+                    <p className='order__price'>{"$" + product.price}</p>
+                    <img className='order__img' src={product.image} alt="" />
+                    <div className="order__info">
+                        <h3>{product.name}</h3>
+                        <p>{product.description}</p>
+                    </div>
+                    <p className='order__quantity'>{pad(product.quantity)}</p>
+                </div>
+            ))}
         </div>
-    )
+    );
 }
 
-export default Order
+export default Order;
