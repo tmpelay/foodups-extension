@@ -13,13 +13,24 @@ type user = {
     profileIcon: string
   }
 
-  type order = {
+  type Product = {
     id: number;
     price: string;
     name: string;
     image: string,
     description: string
     quantity: number
+}
+
+  type order = {
+    id: number;
+    price: string;
+    name: string;
+    image: string,
+    description: string
+    quantity: number,
+    products: Product[]
+
   }
 interface OrderCardProps {
     userInfo: user;
@@ -60,7 +71,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ userInfo, orders }) => {
                 {
                     orders.map((orderInfo) => {
                         return(
-                            <Order key={orderInfo.id} orderInfo={orderInfo}></Order>
+                            <Order key={orderInfo.id} products={orderInfo.products}></Order>
                         )
                     })
                 }

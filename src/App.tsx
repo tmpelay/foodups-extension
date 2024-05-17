@@ -17,14 +17,26 @@ function App() {
     profileIcon: string
   }
 
-  type order = {
+  type Product = {
     id: number;
     price: string;
     name: string;
     image: string,
     description: string
     quantity: number
+}
+
+  type order = {
+    id: number;
+    price: string;
+    name: string;
+    image: string,
+    description: string
+    quantity: number,
+    products: Product[]
   }
+
+
 
   const userInfo: user = {
     id: 0,
@@ -41,15 +53,24 @@ function App() {
       name: "Bagel w/ Chesse",
       image: "bagel.jpeg",
       description: "Plain Bagel Chesse",
-      quantity: 1
-    },
-    {
-      id: 1,
-      price: "3,99",
-      name: "Oteer 0rder",
-      image: "bagel.jpeg",
-      description: "Desc",
-      quantity: 2
+      quantity: 1,
+      products: [
+        {
+          id: 0,
+          price: "5,99",
+          name: "Bagel w/ Chesse",
+          image: "bagel.jpeg",
+          description: "Plain Bagel Chesse",
+          quantity: 1,
+        },{
+          id: 1,
+          price: "3,99",
+          name: "Oteer 0rder",
+          image: "bagel.jpeg",
+          description: "Desc",
+          quantity: 2,
+        }
+      ]
     }
   ]
 
