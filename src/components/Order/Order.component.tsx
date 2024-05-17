@@ -27,7 +27,7 @@ const Order: React.FC<OrderProps> = ({ products }) => {
             {products.map(product => (
                 <div key={product.id} className="your-order__order">
                     <p className='order__price'>{"$" + product.price}</p>
-                    <img className='order__img' src={product.image} alt="" />
+                    <img className='order__img' src={"images/" + product.image} alt="" />
                     <div className="order__info">
                         <h3>{product.name}</h3>
                         <p>{product.description}</p>
